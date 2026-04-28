@@ -1,17 +1,16 @@
-<html lang="ja"><head>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spamer</title>
+    <title>trlz raider</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background: #000; color: #0f0; font-family: 'Meiryo', monospace; }
         .panel { background: #050505; border: 1px solid #1a1a1a; padding: 15px; border-radius: 4px; }
         textarea, input { background: #000 !important; border: 1px solid #222 !important; color: #0f0 !important; outline: none; }
         textarea:focus, input:focus { border-color: #0f0 !important; box-shadow: 0 0 10px #0f03; }
-        .tab-btn { padding: 10px 20px; font-weight: bold; cursor: pointer; border-bottom: 2px solid transparent; transition: 0.3s; }
-        .tab-btn.active { border-bottom-color: #0f0; color: white; background: #111; }
         .log-line { font-size: 10px; border-bottom: 1px solid #111; padding: 2px 0; }
-        .hidden { display: none; }
         .switch { position: relative; display: inline-block; width: 40px; height: 20px; }
         .switch input { opacity: 0; width: 0; height: 0; }
         .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background: #222; border-radius: 20px; transition: .3s; }
@@ -19,77 +18,84 @@
         .slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background: white; transition: .3s; border-radius: 50%; }
         input:checked + .slider:before { transform: translateX(20px); }
     </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-24{height:6rem}.h-32{height:8rem}.h-64{height:16rem}.h-\[500px\]{height:500px}.w-10{width:2.5rem}.w-14{width:3.5rem}.w-full{width:100%}.max-w-\[1600px\]{max-width:1600px}.flex-1{flex:1 1 0%}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.border{border-width:1px}.border-b-2{border-bottom-width:2px}.border-blue-900{--tw-border-opacity:1;border-color:rgb(30 58 138 / var(--tw-border-opacity, 1))}.border-green-900{--tw-border-opacity:1;border-color:rgb(20 83 45 / var(--tw-border-opacity, 1))}.border-red-900{--tw-border-opacity:1;border-color:rgb(127 29 29 / var(--tw-border-opacity, 1))}.border-zinc-700{--tw-border-opacity:1;border-color:rgb(63 63 70 / var(--tw-border-opacity, 1))}.border-zinc-800{--tw-border-opacity:1;border-color:rgb(39 39 42 / var(--tw-border-opacity, 1))}.border-zinc-900{--tw-border-opacity:1;border-color:rgb(24 24 27 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-blue-700{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.bg-blue-900{--tw-bg-opacity:1;background-color:rgb(30 58 138 / var(--tw-bg-opacity, 1))}.bg-blue-950\/10{background-color:rgb(23 37 84 / 0.1)}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}.bg-zinc-950{--tw-bg-opacity:1;background-color:rgb(9 9 11 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-2{padding-bottom:0.5rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[9px\]{font-size:9px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.italic{font-style:italic}.tracking-tighter{letter-spacing:-0.05em}.tracking-widest{letter-spacing:0.1em}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-zinc-400{--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity, 1))}.text-zinc-500{--tw-text-opacity:1;color:rgb(113 113 122 / var(--tw-text-opacity, 1))}.text-zinc-600{--tw-text-opacity:1;color:rgb(82 82 91 / var(--tw-text-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-blue-900\/20{--tw-shadow-color:rgb(30 58 138 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-green-900\/20{--tw-shadow-color:rgb(20 83 45 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-blue-500:hover{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-600:hover{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-800:hover{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}.hover\:bg-green-500:hover{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.hover\:bg-red-800:hover{--tw-bg-opacity:1;background-color:rgb(153 27 27 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:col-span-3{grid-column:span 3 / span 3}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mt-2{margin-top:0.5rem}.flex{display:flex}.grid{display:grid}.h-24{height:6rem}.h-32{height:8rem}.h-64{height:16rem}.h-\[500px\]{height:500px}.w-10{width:2.5rem}.w-14{width:3.5rem}.w-full{width:100%}.max-w-\[1600px\]{max-width:1600px}.flex-1{flex:1 1 0%}.resize-none{resize:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.border{border-width:1px}.border-b-2{border-bottom-width:2px}.border-blue-900{--tw-border-opacity:1;border-color:rgb(30 58 138 / var(--tw-border-opacity, 1))}.border-green-900{--tw-border-opacity:1;border-color:rgb(20 83 45 / var(--tw-border-opacity, 1))}.border-red-900{--tw-border-opacity:1;border-color:rgb(127 29 29 / var(--tw-border-opacity, 1))}.border-zinc-700{--tw-border-opacity:1;border-color:rgb(63 63 70 / var(--tw-border-opacity, 1))}.border-zinc-800{--tw-border-opacity:1;border-color:rgb(39 39 42 / var(--tw-border-opacity, 1))}.border-zinc-900{--tw-border-opacity:1;border-color:rgb(24 24 27 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-700{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.bg-blue-950\/10{background-color:rgb(23 37 84 / 0.1)}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}.bg-zinc-950{--tw-bg-opacity:1;background-color:rgb(9 9 11 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-4{padding:1rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-2{padding-bottom:0.5rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[9px\]{font-size:9px}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.italic{font-style:italic}.tracking-widest{letter-spacing:0.1em}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-zinc-600{--tw-text-opacity:1;color:rgb(82 82 91 / var(--tw-text-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-green-900\/20{--tw-shadow-color:rgb(20 83 45 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-blue-600:hover{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.hover\:bg-green-500:hover{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.hover\:bg-red-800:hover{--tw-bg-opacity:1;background-color:rgb(153 27 27 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:col-span-3{grid-column:span 3 / span 3}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style></head>
+</head>
 <body class="p-4 text-xs">
-
     <div class="max-w-[1600px] mx-auto space-y-4">
         <header class="border-b-2 border-green-900 pb-2 flex justify-between items-center">
-            <h1 class="text-2xl font-black italic text-white font-mono"><span class="text-green-500 text-xs">trlz discord raider</span></h1>
-            <div class="flex gap-4">
-                <div id="tabSender" onclick="switchTab('sender')" class="tab-btn active uppercase">Message Sender</div>
-                <div id="tabReactor" onclick="switchTab('reactor')" class="tab-btn uppercase">trlz on top</div>
-            </div>
+            <h1 class="text-2xl font-black italic text-white font-mono"><span class="text-green-500 text-xs">trlz </span>trlz raider</h1>
         </header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
-            
-            <div class="space-y-4">
-                <div class="panel">
-                    <label class="text-[9px] text-zinc-600 font-bold uppercase">token</label>
-                    <textarea id="tokensText" class="w-full h-32 p-2 mt-2 text-[10px] rounded resize-none" placeholder="Tokens..."></textarea>
+        <main class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <div class="panel space-y-4">
+                <div>
+                    <label class="text-green-500 font-bold mb-2 block text-xs">token</label>
+                    <textarea id="tokensText" class="w-full h-64 p-2 text-[10px] font-mono resize-none border border-zinc-800 bg-black"></textarea>
                 </div>
-                <div class="panel border-blue-900 bg-blue-950/10">
-                    <label class="text-[9px] text-blue-400 font-bold uppercase">サーバー招待リンク</label>
-                    <input type="text" id="inviteCode" class="w-full p-2 mt-2 rounded mb-2 text-white font-bold" placeholder="discord.gg/trlz">
-                    <button onclick="joinServer()" class="w-full bg-blue-700 hover:bg-blue-600 text-white py-2 rounded font-black text-[10px]">join</button>
-                </div>
-                <div id="logArea" class="panel h-64 overflow-y-auto font-mono text-[9px] text-zinc-600 border-zinc-900">
-                    <div>ログ</div>
+                <div>
+                    <label class="text-green-500 font-bold mb-2 block text-xs">joiner</label>
+                    <input type="text" id="inviteCode" class="w-full p-2 bg-black border border-zinc-800" placeholder="コード">
+                    <button onclick="joinServer()" class="w-full mt-2 bg-blue-700 text-white p-2 font-bold">join</button>
                 </div>
             </div>
 
-            <div class="lg:col-span-3">
-                
-                <div id="contentSender" class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                    <div class="panel flex flex-col gap-2 h-[500px]">
-                        <label class="text-[9px] text-zinc-600 font-bold">3. SCANNER</label>
-                        <input type="text" id="guildId" class="w-full p-2 rounded text-white font-bold" placeholder="サーバーid">
-                        <button onclick="fullScan()" class="w-full bg-zinc-900 py-2 rounded font-black text-green-400 border border-zinc-700 mb-2">uidとチャンネルid自動取得</button>
-                        <textarea id="channelList" class="flex-1 w-full p-2 text-[9px] rounded resize-none" placeholder="チャンネルid"></textarea>
-                        <textarea id="uidList" class="flex-1 w-full p-2 text-[9px] rounded resize-none" placeholder="ユーザーid"></textarea>
-                    </div>
-                    <div class="lg:col-span-2 panel">
-                        <label class="text-[9px] text-zinc-600 font-bold">メッセージ設定</label>
-                        <textarea id="message" class="w-full h-24 p-2 mt-2 text-xs rounded mb-4" placeholder="メッセージ本文を入力"></textarea>
-                        
-                        <div class="grid grid-cols-2 gap-4 bg-zinc-950 p-4 rounded border border-zinc-800 mb-4 font-bold">
-                            <div class="space-y-3">
-                                <div class="flex justify-between items-center text-[10px]">
-                                    <span>メンション数:</span>
-                                    <input type="number" id="mentionCount" value="1" class="w-10 bg-black text-green-400 border border-zinc-700 px-1 text-center">
-                                </div>
-                                <div class="flex justify-between items-center text-[10px]">                              
-                            </div>
-                            <div class="space-y-3">
-                                <div class="flex justify-between items-center text-[10px]">
-                                    <span>送信間隔(秒):</span>
-                                    <input type="number" id="intervalSec" value="0.1" step="0.01" class="w-14 bg-black text-green-400 border border-zinc-700 px-1 text-center">
-                                </div>
-                                <div class="flex justify-between items-center text-[10px]">
-                                    <span>ランダム文字列:</span>
-                                    <label class="switch"><input type="checkbox" id="useRandomStr" checked=""><span class="slider"></span></label>
-                                </div>
+            <div class="lg:col-span-2 space-y-4">
+                <div class="panel space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-green-500 font-bold mb-2 block">サーバーID</label>
+                            <input type="text" id="guildId" class="w-full p-2 bg-black border border-zinc-800">
+                            <div class="grid grid-cols-2 gap-1 mt-2">
+                                <button onclick="fullScan()" class="bg-zinc-900 border border-zinc-700 p-1 text-[8px]">CH取得</button>
+                                <button onclick="fetchUIDs()" class="bg-zinc-900 border border-zinc-700 p-1 text-[8px]">UID取得</button>
                             </div>
                         </div>
-                        <button onclick="execute()" id="execBtn" class="w-full bg-green-600 hover:bg-green-500 text-black font-black py-6 rounded text-sm tracking-widest transition-all mb-2 shadow-lg shadow-green-900/20">送信開始</button>
-                        <button onclick="stop()" class="w-full bg-zinc-900 text-red-500 border border-red-900 py-2 rounded font-bold hover:bg-red-800 hover:text-white transition-all">停止</button>
+                        <div>
+                            <label class="text-green-500 font-bold mb-2 block">チャンネルID</label>
+                            <textarea id="channelList" class="w-full h-24 p-2 text-[10px] font-mono resize-none border border-zinc-800 bg-black"></textarea>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text-green-500 font-bold mb-2 block">送信メッセージ</label>
+                        <textarea id="message" class="w-full h-32 p-2 text-[10px] font-mono resize-none border border-zinc-800 bg-black"></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center bg-zinc-900/50 p-2 rounded">
+                                <span>ランダムスティックな文字列</span>
+                                <label class="switch"><input type="checkbox" id="useRandomStr"><span class="slider"></span></label>
+                            </div>
+                            <div class="flex justify-between items-center text-[10px]">
+                                <span>送信回数</span>
+                                <input type="number" id="sendCount" value="1" class="w-12 p-1 text-center bg-black border border-zinc-800">
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center text-[10px]">
+                                <span>メンション数</span>
+                                <input type="number" id="mentionCount" value="1" class="w-12 p-1 text-center bg-black border border-zinc-800">
+                            </div>
+                            <textarea id="uidList" class="w-full h-16 p-2 text-[9px] font-mono border border-zinc-800 bg-black" placeholder="UIDリスト"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 pt-4">
+                        <button onclick="executeBurst()" class="w-full bg-green-600 text-black py-4 text-2xl font-black italic shadow-lg uppercase">raid</button>
+                        <button onclick="stop()" class="w-full bg-red-600 text-white py-2 font-bold uppercase">停止</button>
+                        <button onclick="leaveServer()" class="w-full bg-zinc-800 text-zinc-400 py-2 font-bold border border-zinc-600">退出</button>
                     </div>
                 </div>
-
             </div>
-        </div>
+
+            <div class="panel flex flex-col h-[500px]">
+                <div class="border-b border-green-900 pb-2 mb-2">
+                    <span class="text-green-500 font-bold uppercase">LOG</span>
+                </div>
+                <div id="logArea" class="flex-1 overflow-y-auto space-y-1 font-mono"></div>
+            </div>
+        </main>
     </div>
-
     <script src="script.js"></script>
-
-</body></html>
+</body>
+</html>
